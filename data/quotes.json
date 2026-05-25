@@ -1,0 +1,32 @@
+[
+  {
+    "name": "flavia",
+    "email": "flavia@gmail.com",
+    "phone": "09876667556",
+    "projectType": "Construction of house",
+    "message": "hey",
+    "status": "new",
+    "createdAt": "2026-05-25T16:51:52.306Z",
+    "id": "197f745f-bfe0-4063-a1b7-d9c358303f42"
+  },
+  {
+    "name": "Tushemereirwe Margaret",
+    "email": "marytooshi@gmail.com",
+    "phone": "0756544057",
+    "projectType": "Plumbing works",
+    "message": "byee",
+    "status": "new",
+    "createdAt": "2026-05-25T15:53:45.095Z",
+    "id": "57bbe03d-f0b4-4dd1-b6e7-2dcb4346481d"
+  },
+  {
+    "id": "572688a9-6fbc-4967-b707-632c545b9169",
+    "name": "Margaret Tushemereirwe",
+    "email": "tushemereirwe.margaret@stud.ndejjeuniversity.ac.ug",
+    "phone": "679876543456",
+    "projectType": "Compound design",
+    "message": "bgtffryu",
+    "status": "reviewed",
+    "createdAt": "2026-05-21T15:57:19.692Z"
+  }
+]

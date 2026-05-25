@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request a quote from El Sueño CSLT for design and construction services in Wakiso.">
+  <title>Request a Quote | El Sueño CSLT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="consultation">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span>
+          <span>Request a Quote</span>
+        </nav>
+        <p class="eyebrow">Get in Touch</p>
+        <h1>Request a quote</h1>
+        <p class="hero-lead">Tell us about your project—drawings, construction, electrical, plumbing, or compound work—and we will get back to you promptly.</p>
+      </div>
+    </section>
+    <section class="page-body page-body-surface">
+      <div class="container">
+        <form class="contact-form contact-form-page" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567">
+          </div>
+          <div class="form-row">
+            <label for="project-type">Project type</label>
+            <select id="project-type" name="project-type" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="Architectural drawings">Architectural drawings</option>
+              <option value="Interior design">Interior design</option>
+              <option value="Structural drawings">Structural drawings</option>
+              <option value="Structural reports">Structural reports</option>
+              <option value="Bill of quantities">Bill of quantities</option>
+              <option value="Material schedules">Material schedules</option>
+              <option value="Construction of house">Construction of house</option>
+              <option value="Electrical works">Electrical works</option>
+              <option value="Plumbing works">Plumbing works</option>
+              <option value="Compound design">Compound design</option>
+              <option value="Multiple services">Multiple services</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-row form-row-full">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Timeline, location, scope, and any concerns…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+        </form>
+        <p class="consultation-alt">Prefer to call or email? Visit our <a href="contact.html">contact page</a>.</p>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="api.js"></script>
+  <script src="layout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

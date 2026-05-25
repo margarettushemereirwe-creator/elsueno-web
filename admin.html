@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Quote Requests | El Sueño CSLT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <div id="admin-login" class="admin-login">
+    <div class="admin-login-card">
+      <h1>Admin</h1>
+      <p>Sign in to view quote requests from the website.</p>
+      <form id="login-form">
+        <label for="admin-password">Password</label>
+        <input type="password" id="admin-password" required autocomplete="current-password">
+        <button type="submit" class="btn btn-primary btn-full">Sign in</button>
+        <p class="admin-error" id="login-error" role="alert"></p>
+      </form>
+      <p class="admin-login-hint"><a href="index.html">← Back to website</a></p>
+    </div>
+  </div>
+
+  <div id="admin-app" class="admin-app" hidden>
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1>Quote requests</h1>
+        <div class="admin-header-actions">
+          <a href="portal.html" class="btn btn-ghost-dark btn-sm">User portal</a>
+          <a href="index.html" class="btn btn-ghost-dark btn-sm">Website</a>
+          <button type="button" class="btn btn-ghost-dark btn-sm" id="logout-btn">Sign out</button>
+        </div>
+      </div>
+    </header>
+    <main class="admin-main container">
+      <div class="admin-toolbar">
+        <p id="quote-count" class="admin-count">0 requests</p>
+        <button type="button" class="btn btn-primary btn-sm" id="refresh-btn">Refresh</button>
+      </div>
+      <div id="quotes-list" class="quotes-list"></div>
+      <p id="quotes-empty" class="admin-empty" hidden>No quote requests yet. They appear here when someone submits the form on Request a Quote.</p>
+    </main>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
