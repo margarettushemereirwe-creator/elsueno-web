@@ -1,10 +1,7 @@
 (function () {
   const page = document.body.dataset.page || "";
   const isHome = page === "home";
-  const BRAND = {
-    name:"El Sueño CSLT",
-    since:"2019",
-    location:"Bweyogerere, uganda";}
+  const BRAND = "El Sueño CSLT";
 
   const SERVICES = [
     { id: "service-architectural", file: "service-architectural.html", title: "Architectural Drawings" },
