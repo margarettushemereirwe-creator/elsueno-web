@@ -109,10 +109,44 @@ a:hover {
   border-radius: 3px;
 }
 
-.logo-text em {
+.logo-text em,
+.logo-name em {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
+  color: var(--color-accent);
+}
+
+.logo-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.05rem;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.logo-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.logo-since {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.logo-footer .logo-brand {
+  align-items: center;
+  text-align: center;
+}
+
+.logo-footer .logo-since {
   color: var(--color-accent);
 }
 
@@ -935,6 +969,10 @@ section {
 
 /* Mobile */
 @media (max-width: 768px) {
+  .logo-name {
+    font-size: 0.95rem;
+  }
+
   .nav-toggle {
     display: flex;
   }

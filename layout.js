@@ -1,7 +1,25 @@
 (function () {
   const page = document.body.dataset.page || "";
   const isHome = page === "home";
-  const BRAND = "El Sueño CSLT";
+
+  /** Edit company name and year founded — shows by the logo on every page. */
+  const BRAND = {
+    name: "El Sueño CSLT",
+    since: "2019",
+    location: "Architectural design, construction & building services in Wakiso.",
+  };
+
+  function logoHtml(footer) {
+    const extra = footer ? " logo-footer" : "";
+    return `
+      <a href="index.html" class="logo${extra}">
+        <img src="assets/logo.png" alt="${BRAND.name}" class="logo-img" width="120" height="120">
+        <span class="logo-brand">
+          <span class="logo-name"><em>El Sueño</em> CSLT</span>
+          <span class="logo-since">Since ${BRAND.since}</span>
+        </span>
+      </a>`;
+  }
 
   const SERVICES = [
     { id: "service-architectural", file: "service-architectural.html", title: "Architectural Drawings" },
@@ -40,9 +58,7 @@
   const headerHtml = `
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.png" alt="El Sueño Consultants" class="logo-img" width="120" height="120">
-      </a>
+      ${logoHtml(false)}
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
@@ -96,15 +112,13 @@
   const footerHtml = `
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a href="index.html" class="logo logo-footer">
-        <img src="assets/logo.png" alt="El Sueño Consultants" class="logo-img" width="120" height="120">
-      </a>
-      <p class="footer-tagline">Architectural design, construction &amp; building services in Wakiso.</p>
+      ${logoHtml(true)}
+      <p class="footer-tagline">${BRAND.location}</p>
       <p class="footer-contact">
         <a href="tel:+256771383933">+256 771 383933</a> ·
         <a href="mailto:elsuenocslt@gmail.com">elsuenocslt@gmail.com</a>
       </p>
-      <p class="footer-copy">&copy; <span id="year"></span> ${BRAND}. All rights reserved. · <a href="admin.html" class="footer-admin-link">Admin</a></p>
+      <p class="footer-copy">&copy; <span id="year"></span> ${BRAND.name}. All rights reserved. · <a href="admin.html" class="footer-admin-link">Admin</a></p>
     </div>
   </footer>`;
 
